@@ -1,0 +1,6 @@
+framework module CSNative {
+  umbrella header "CSNative.h"
+
+  export *
+  module * { export * }
+}

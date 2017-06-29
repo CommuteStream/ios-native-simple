@@ -1,14 +1,9 @@
-//
-//  AppDelegate.h
-//  SimpleApp
-//
-//  Created by Thomas Burdick on 2/24/17.
-//  Copyright © 2017 CommuteStream. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
+@import UIKit;
+@import CSNative;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property CSNAdsController *adsController;
 
 @property (strong, nonatomic) UIWindow *window;
 

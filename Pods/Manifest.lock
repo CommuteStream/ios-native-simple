@@ -1,0 +1,27 @@
+PODS:
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - Protobuf (3.2.1)
+
+DEPENDENCIES:
+  - OHHTTPStubs (~> 5.2)
+  - Protobuf (~> 3.2.1)
+
+SPEC CHECKSUMS:
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  Protobuf: 2ccbaf193f6c65adc67745453ca0c13234c32796
+
+PODFILE CHECKSUM: e4e5102a299a9f53c55f6f932430f6494966de1a
+
+COCOAPODS: 1.2.1
