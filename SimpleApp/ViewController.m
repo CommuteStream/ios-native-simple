@@ -27,6 +27,7 @@
     CSNPHeroComponent *mockHero = [[CSNPHeroComponent alloc] init];
     [mockHero setKind:CSNPHeroKind_Html];
     [mockHero setBlob:mockHtml];
+    [mockHero setInteractive:true];
     CSNPNativeAd *mockAd = [[CSNPNativeAd alloc] init];
     [mockAd setHeadline:mockHeadline];
     [mockAd setLogo:mockLogo];
