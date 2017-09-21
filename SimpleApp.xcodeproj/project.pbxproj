@@ -15,9 +15,9 @@
 		1B5560171E611BFD00FE1C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5560151E611BFD00FE1C08 /* LaunchScreen.storyboard */; };
 		1B5560221E611BFD00FE1C08 /* SimpleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5560211E611BFD00FE1C08 /* SimpleAppTests.m */; };
 		1B55602D1E611BFD00FE1C08 /* SimpleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B55602C1E611BFD00FE1C08 /* SimpleAppUITests.m */; };
-		1BDE345D1F74321B00009DB9 /* CSNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE345C1F74321B00009DB9 /* CSNative.framework */; };
-		1BDE345E1F74322A00009DB9 /* CSNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE345C1F74321B00009DB9 /* CSNative.framework */; };
-		1BDE345F1F74322A00009DB9 /* CSNative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE345C1F74321B00009DB9 /* CSNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1BDE34611F74342100009DB9 /* CSNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE34601F74342100009DB9 /* CSNative.framework */; };
+		1BDE34621F74343900009DB9 /* CSNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE34601F74342100009DB9 /* CSNative.framework */; };
+		1BDE34631F74343900009DB9 /* CSNative.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE34601F74342100009DB9 /* CSNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7CF249C7F40A60A21358AF7 /* Pods_SimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A9C1DFAE2249C64D925C4A /* Pods_SimpleApp.framework */; };
 		F42D03EEA7B884CBCCC7ACB3 /* Pods_SimpleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CB423CA4AFE0C3F462E8A6 /* Pods_SimpleAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1BDE345F1F74322A00009DB9 /* CSNative.framework in Embed Frameworks */,
+				1BDE34631F74343900009DB9 /* CSNative.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +72,7 @@
 		1B55602C1E611BFD00FE1C08 /* SimpleAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAppUITests.m; sourceTree = "<group>"; };
 		1B55602E1E611BFD00FE1C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B55603B1E611C1500FE1C08 /* CSNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSNative.framework; path = "../../../Library/Developer/Xcode/DerivedData/CSNative-eaatqhybcyuulchkviltedghujnx/Build/Products/Debug-iphonesimulator/CSNative.framework"; sourceTree = "<group>"; };
-		1BDE345C1F74321B00009DB9 /* CSNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CSNative.framework; sourceTree = "<group>"; };
+		1BDE34601F74342100009DB9 /* CSNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CSNative.framework; sourceTree = "<group>"; };
 		46D7CE54914DCB841D42D830 /* Pods-SimpleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleAppTests/Pods-SimpleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		87EC8B168A75518E6D0CF128 /* Pods-SimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleApp/Pods-SimpleApp.release.xcconfig"; sourceTree = "<group>"; };
 		91CB423CA4AFE0C3F462E8A6 /* Pods_SimpleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,9 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BDE345E1F74322A00009DB9 /* CSNative.framework in Frameworks */,
+				1BDE34621F74343900009DB9 /* CSNative.framework in Frameworks */,
 				D7CF249C7F40A60A21358AF7 /* Pods_SimpleApp.framework in Frameworks */,
-				1BDE345D1F74321B00009DB9 /* CSNative.framework in Frameworks */,
+				1BDE34611F74342100009DB9 /* CSNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 		1B555FFB1E611BFD00FE1C08 = {
 			isa = PBXGroup;
 			children = (
-				1BDE345C1F74321B00009DB9 /* CSNative.framework */,
+				1BDE34601F74342100009DB9 /* CSNative.framework */,
 				1B5560061E611BFD00FE1C08 /* SimpleApp */,
 				1B5560071E611BFD00FE1C08 /* Supporting Files */,
 				1B5560201E611BFD00FE1C08 /* SimpleAppTests */,
