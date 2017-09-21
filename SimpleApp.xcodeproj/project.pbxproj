@@ -270,7 +270,7 @@
 				TargetAttributes = {
 					1B5560031E611BFD00FE1C08 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 28L869NSYV;
+						DevelopmentTeam = GP4GZH776X;
 						ProvisioningStyle = Automatic;
 					};
 					1B55601C1E611BFD00FE1C08 = {
@@ -582,7 +582,7 @@
 			baseConfigurationReference = 929C66CEAB92AC28739D63A9 /* Pods-SimpleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 28L869NSYV;
+				DEVELOPMENT_TEAM = GP4GZH776X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -601,7 +601,7 @@
 			baseConfigurationReference = 87EC8B168A75518E6D0CF128 /* Pods-SimpleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 28L869NSYV;
+				DEVELOPMENT_TEAM = GP4GZH776X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
