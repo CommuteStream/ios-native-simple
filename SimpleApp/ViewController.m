@@ -16,7 +16,15 @@
     uuid_t emptyUuid = {0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     NSData *emptyAdUnit = [NSData dataWithBytes:emptyUuid length:16];
     CSNMockClient *mockClient = [[CSNMockClient alloc] init];
-    NSString *mockHtmlStr = @"<html><body><h1>Mocked HTML Ad</h1><a href=\"https://google.com\">Google</a></body></html>";
+    
+    NSString *mockHtmlStr = @"<!DOCTYPE html><html><body style=\"margin:0px\"><video width=\"1200px\" width=\"627px\" autoplay=\"autoplay\" loop=\"loop\" muted=\"muted\" controls><source src=\"https://commutestream.com/video/website_masthead_video_bkg.mp4\" type=\"video/mp4\"><source src=\"https://commutestream.com/video/website_masthead_video_bkg.webm\" type=\"video/webm\">Your browser does not support HTML5 video.</video></body></html>";
+    
+    //NSString *mockHtmlStr = @"<!DOCTYPE html><html><body style=\"margin:0px\"><img style=\"padding:0px\" src=\"https://s3.amazonaws.com/commutestream-cdn/test_image.jpg\"></body></html>";
+    
+    //NSString *mockHtmlStr = @"<!DOCTYPE html><html><body style=\"margin:0px\"><img style=\"padding:0px; display:\" src=\"https://ncusar.org/modelarableague/wordpress/wp-content/uploads/2013/04/busacc-1200x627.jpg\"></body></html>";
+    
+    //NSString *mockHtmlStr = @"<!DOCTYPE html><html><body style=\"margin:0px\"><iframe width=\"1200\" height=\"627\" src=\"https://www.youtube.com/embed/CLsMnItzhC0?rel=0&amp;start=1&amp;autoplay=1;loop=1\" frameborder=\"0\" allowfullscreen></iframe></body></html>";
+    
     NSData *mockHtml = [mockHtmlStr dataUsingEncoding:NSUTF8StringEncoding];
     NSString *imagePath = [[NSBundle bundleForClass:[CSNMockClient class]] pathForResource:@"cs" ofType:@"png"];
     NSData *imageData = [NSData dataWithContentsOfFile:imagePath];
