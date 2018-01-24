@@ -7,12 +7,19 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property NSMutableArray *fakeStops;
 @property NSArray *ads;
+@property CLLocationManager *locationManager;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.distanceFilter = 10.0;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    [_locationManager requestWhenInUseAuthorization];
+    [_locationManager startUpdatingLocation];
     uuid_t emptyUuid = {0, 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     NSData *emptyAdUnit = [NSData dataWithBytes:emptyUuid length:16];
     CSNMockClient *mockClient = [[CSNMockClient alloc] init];
@@ -42,19 +49,19 @@
     [mockResponse setHashId:hashId];
     [mockResponse setAdsArray:mockAds];
     [mockClient setMockedResponse:mockResponse];
-    _adsController = [[CSNAdsController alloc] initWithClient:mockClient adUnit:emptyAdUnit];
-    //_adsController = [[CSNAdsController alloc] initWithAdUnit:@"2562ccec-0788-44c9-a17d-13e0a114ff99"];
+    //_adsController = [[CSNAdsController alloc] initWithClient:mockClient adUnit:emptyAdUnit];
+    _adsController = [[CSNAdsController alloc] initWithAdUnit:@"2562ccec-0788-44c9-a17d-13e0a114ff99"];
     AppDelegate* delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [delegate setAdsController:_adsController ];
     [_tableView setDelegate:self];
     [_tableView setDataSource:self];
     _fakeStops = [[NSMutableArray alloc] init];
     NSMutableArray *adRequests = [[NSMutableArray alloc] init];
-        CSNTransitStop *transitStop = [[CSNTransitStop alloc] initWithIDs:@"mock" routeID:@"mock" stopID:@"mock"];
-        [_fakeStops addObject:transitStop];
-        CSNAdRequest *adRequest = [[CSNAdRequest alloc] init];
-        [adRequest addStop:transitStop];
-        [adRequests addObject:adRequest];
+    CSNTransitStop *transitStop = [[CSNTransitStop alloc] initWithIDs:@"cta" routeID:@"" stopID:@"1580"];
+    [_fakeStops addObject:transitStop];
+    CSNAdRequest *adRequest = [[CSNAdRequest alloc] init];
+    [adRequest addStop:transitStop];
+    [adRequests addObject:adRequest];
     [_adsController fetchAds:adRequests completed:^(NSArray<CSNOptionalAd *> *ads) {
         _ads = ads;
         dispatch_async(dispatch_get_main_queue(), ^{
